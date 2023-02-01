@@ -16,5 +16,7 @@ $(document).ready(function(){
 
     var hiddenSec = document.querySelectorAll(".hidden");
     hiddenSec.forEach((el) => observer.observe(el));
+    var hidden1Sec = document.querySelectorAll(".hidden1");
+    hidden1Sec.forEach((el) => observer.observe(el));
 
 });

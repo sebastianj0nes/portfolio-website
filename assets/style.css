@@ -67,6 +67,9 @@ section {
 }
 
 /* Projects */
+.projectHeader{
+    padding: 25px;
+}
 
 #buttonContainer{
     display: grid;

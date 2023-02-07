@@ -1,9 +1,15 @@
+:root {
+    --background: #131316;
+}
+
+
 body{
-    background-color: #131316;
+    background-color: var(--background);
     color: #ffffff;
     padding: 0;
     margin: 0;
 }
+
 
 section {
     display: grid;
@@ -34,4 +40,15 @@ section {
 
 .landing{
     font-size: 45px;
+}
+
+
+/* Jumbotron */
+#about{
+    background: var(--background);
+}
+
+#mtnImg{
+    max-height: 600px;
+    max-width: 450px;
 }

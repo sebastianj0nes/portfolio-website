@@ -16,6 +16,8 @@ section {
     place-items: center;
     align-content: center;
     min-height: 110vh;
+    padding-bottom: 60px;
+
 }
 
 /* Loading transition classes */
@@ -62,4 +64,16 @@ section {
 
 .list-group{
     padding: 5px;
+}
+
+/* Projects */
+
+#buttonContainer{
+    display: grid;
+    place-items: center;
+    align-content: center;
+}
+
+.workBtn{
+    padding: 15px;
 }

@@ -33,6 +33,11 @@ var hidden1Sec = document.querySelectorAll(".hidden1");
 hidden1Sec.forEach((el) => observer.observe(el));
 
 
+$("#work-btn").on("click",function(){
+    window.location.href("https://sebastianj0nes.github.io/portfolio-website/#about");
+})
+
+
 // Function to clear work project content
 var clearContents = function(){
     projectHeader.text("");

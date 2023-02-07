@@ -77,3 +77,9 @@ section {
 .workBtn{
     padding: 15px;
 }
+
+#projectRow{
+    display: grid;
+    place-items: center;
+    align-content: center;
+}

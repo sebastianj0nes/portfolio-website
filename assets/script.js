@@ -2,9 +2,16 @@ $(document).ready(function(){
 
 
 
-// Carousel buttons
-var nextBtn = $("#nextBtn");
-var prevBtn = $("#prevBtn");
+// Project buttons
+var weatherButton = $("#weatherBtn");
+var quizButton = $("#quizBtn");
+var passwordButton = $("#passGenBtn");
+
+// Project elements
+var projectRow = $("#projectRow");
+var projectHeader = $("#projectHeader");
+var imageContainer = $("#imageContainer");
+var projectP = $("#projectP");
 
 
 // Add observer to listen for which elements are viewable
@@ -26,22 +33,37 @@ var hidden1Sec = document.querySelectorAll(".hidden1");
 hidden1Sec.forEach((el) => observer.observe(el));
 
 
-// Add event listener for button click
-$("#work-btn").on("click",function(){
+// Function to clear work project content
+var clearContents = function(){
+    projectHeader.text("");
+    imageContainer.removeClass("src");
+    projectP.text("");
+}
+
+
+// Change projects displayed when click on buttons
+weatherButton.on("click",function(){
+    console.log("Load weather project");
+    // Clear any previous HTML
+
+    clearContents();
+    projectHeader.text("Weather Dashboard");
+
+
 })
+quizButton.on("click",function(){
+    console.log("Load quiz project");
 
-nextBtn.on("click",function(event){
-    event.preventDefault();
-    console.log("Next button");
+    clearContents();
+    projectHeader.text("Coding Quiz");
 
-    // Create function to change carousel to next slide in set  
-    // On click
-        // Change 
 })
+passwordButton.on("click",function(){
+    console.log("Load password project");
 
-prevBtn.on("click",function(event){
-    event.preventDefault();
-    console.log("Previous button");
+    clearContents();
+    projectHeader.text("Password Generator");
+
 })
 
 

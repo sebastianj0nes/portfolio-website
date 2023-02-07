@@ -4,9 +4,11 @@ $(document).ready(function(){
 
 // Project buttons
 var weatherButton = $("#weatherBtn");
+var munchifyButton = $("#munchifyBtn");
 var quizButton = $("#quizBtn");
 var twinCitiesButton = $("#twinCitiesBtn");
 var passwordButton = $("#passGenBtn");
+
 
 // Project elements
 var projectHeader = $("#projectHeader");
@@ -75,6 +77,29 @@ weatherButton.on("click",function(){
     imageContainer.append(githubLogo);
 })
 
+munchifyButton.on("click",function(){
+
+    clearContents();
+    projectHeader.text("Munchify");
+    projectHeader.addClass("projectHeader");
+
+    var weatherImg = $("<img src='./assets/images/munchify.png' class='projectImg' alt='Image of munchify loading screen'>");
+    imageContainer.append(weatherImg);
+
+    projectP.text("Tech Stack: jQuery, Node.js, Bootstrap, HTML");
+
+    var projectDesc = $("<p>");
+    var projectDesc2 = $("<p>");
+    projectDesc.text("Generate playlists and recipes together based on user input");
+    projectDesc2.text("Calling Spoonacular and Spotify API to call data");
+    imageContainer.append(projectDesc,projectDesc2);
+
+
+
+    var githubLogo = $("<a href='https://github.com/stuart540/munchify' target='_blank'>Repo</a>");
+    imageContainer.append(githubLogo);
+})
+
 // Code Quiz Project
 quizButton.on("click",function(){
 
@@ -121,28 +146,6 @@ twinCitiesButton.on("click",function(){
     imageContainer.append(projectDesc,projectDesc2);
 
 
-})
-
-
-// Password Generator Project
-passwordButton.on("click",function(){
-
-    clearContents();
-    projectHeader.text("Password Generator");
-    projectHeader.addClass("projectHeader");
-
-    var weatherImg = $("<img src='./assets/images/pass-generator.png' class='projectImg' alt='Image of password generator application'>");
-    imageContainer.append(weatherImg);
-
-    projectP.text("Tech Stack: jQuery, HTML");
-
-    var projectDesc = $("<p>");
-    projectDesc.text("Using alerts to gather user input to create a secure randomly generated password");
-    imageContainer.append(projectDesc);
-
-
-    var githubLogo = $("<a href='https://github.com/sebastianj0nes/password-generator' target='_blank'>Repo</a>");
-    imageContainer.append(githubLogo);
 })
 
 

@@ -53,6 +53,7 @@ weatherButton.on("click",function(){
     projectHeader.text("Weather Dashboard");
     projectHeader.addClass("projectHeader");
 
+
     var weatherImg = $("<img src='./assets/images/weather_dashboard.png' class='projectImg' alt='Image of weather dashboard'>");
     imageContainer.append(weatherImg);
 
@@ -65,6 +66,8 @@ weatherButton.on("click",function(){
     imageContainer.append(projectDesc,projectDesc2);
 
 
+    var githubLogo = $("<a href='https://github.com/sebastianj0nes/weather-forecast-app' target='_blank'>Repo</a>");
+    imageContainer.append(githubLogo);
 })
 
 // Code Quiz Project
@@ -86,6 +89,9 @@ quizButton.on("click",function(){
     imageContainer.append(projectDesc,projectDesc2);
 
 
+
+    var githubLogo = $("<a href='https://github.com/sebastianj0nes/code-quiz' target='_blank'>Repo</a>");
+    imageContainer.append(githubLogo);
 })
 
 // Twin Cities Project
@@ -126,11 +132,12 @@ passwordButton.on("click",function(){
     projectP.text("Tech Stack: jQuery, HTML");
 
     var projectDesc = $("<p>");
-    var projectDesc2 = $("<p>");
     projectDesc.text("Using alerts to gather user input to create a secure randomly generated password");
-    imageContainer.append(projectDesc,projectDesc2);
+    imageContainer.append(projectDesc);
 
 
+    var githubLogo = $("<a href='https://github.com/sebastianj0nes/password-generator' target='_blank'>Repo</a>");
+    imageContainer.append(githubLogo);
 })
 
 

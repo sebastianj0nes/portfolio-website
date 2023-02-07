@@ -34,7 +34,7 @@ hidden1Sec.forEach((el) => observer.observe(el));
 
 
 $("#work-btn").on("click",function(){
-    window.location.href("https://sebastianj0nes.github.io/portfolio-website/#about");
+    window.location.assign("https://sebastianj0nes.github.io/portfolio-website/#about");
 })
 
 

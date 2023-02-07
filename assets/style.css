@@ -83,3 +83,8 @@ section {
     place-items: center;
     align-content: center;
 }
+
+.projectImg{
+    height: 420px;
+    width: 650px;
+}

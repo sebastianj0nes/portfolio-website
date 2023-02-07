@@ -8,7 +8,6 @@ var quizButton = $("#quizBtn");
 var passwordButton = $("#passGenBtn");
 
 // Project elements
-var projectRow = $("#projectRow");
 var projectHeader = $("#projectHeader");
 var imageContainer = $("#imageContainer");
 var projectP = $("#projectP");
@@ -36,30 +35,36 @@ hidden1Sec.forEach((el) => observer.observe(el));
 // Function to clear work project content
 var clearContents = function(){
     projectHeader.text("");
-    imageContainer.removeClass("src");
+    $("#imageContainer").empty();
     projectP.text("");
 }
 
 
 // Change projects displayed when click on buttons
-weatherButton.on("click",function(){
-    console.log("Load weather project");
-    // Clear any previous HTML
 
+// Weather Dashboard Project
+weatherButton.on("click",function(){
+
+    // Clear any previous HTML
     clearContents();
+
+    // Change header text 
     projectHeader.text("Weather Dashboard");
 
-
+    var weatherImg = $("<img src='./assets/images/weather_dashboard.png' class='projectImg' alt='Image of weather dashboard'>");
+    imageContainer.append(weatherImg);
 })
+
+// Code Quiz Project
 quizButton.on("click",function(){
-    console.log("Load quiz project");
 
     clearContents();
     projectHeader.text("Coding Quiz");
 
 })
+
+// Password Generator Project
 passwordButton.on("click",function(){
-    console.log("Load password project");
 
     clearContents();
     projectHeader.text("Password Generator");

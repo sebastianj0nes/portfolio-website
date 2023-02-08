@@ -2,6 +2,13 @@
     --background: #131316;
 }
 
+html,body{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
 
 body{
     background-color: var(--background);
@@ -86,8 +93,16 @@ section {
     place-items: center;
     align-content: center;
 }
-
 .projectImg{
     height: 420px;
     width: 750px;
+}
+/* Contact section */
+#contact{
+    background-color: #1b263b;
+}
+
+.contactLogos{
+    height: 80px;
+    width: 72px;
 }

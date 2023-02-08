@@ -1,13 +1,15 @@
 $(document).ready(function(){
 
-
+    // Load tooltip for project buttons
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+      })
 
 // Project buttons
 var weatherButton = $("#weatherBtn");
 var munchifyButton = $("#munchifyBtn");
 var quizButton = $("#quizBtn");
 var twinCitiesButton = $("#twinCitiesBtn");
-var passwordButton = $("#passGenBtn");
 
 
 // Project elements
@@ -147,6 +149,10 @@ twinCitiesButton.on("click",function(){
 
 
 })
+
+
+// Auto-hide tooltip after clicking away
+$('#element').tooltip('hide');
 
 
 

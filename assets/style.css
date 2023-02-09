@@ -98,8 +98,9 @@ section {
     width: 750px;
 }
 /* Contact section */
-#contact{
-    background-color: #1b263b;
+#contact,
+#proj{
+    background-color: var(--background);
 }
 
 .contactLogos{

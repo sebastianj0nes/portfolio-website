@@ -147,12 +147,22 @@ twinCitiesButton.on("click",function(){
     projectDesc2.text("Using mySQL database to store cities data");
     imageContainer.append(projectDesc,projectDesc2);
 
+    // Add alert on click of final project button
+    $("#projAlert").addClass("show");
 
 })
 
 
 // Auto-hide tooltip after clicking away
-$('#element').tooltip('hide');
+$(document).on("click",function(){
+    $('#element').tooltip('hide');
+})
+
+$("#closeButton").on("click", function(){
+    $("#projAlert").alert("close");
+})
+
+
 
 
 

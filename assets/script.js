@@ -17,13 +17,13 @@ var projectHeader = $("#projectHeader");
 var imageContainer = $("#imageContainer");
 var projectP = $("#projectP");
 
-
 // Add observer to listen for which elements are viewable
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         console.log(entry)
         if (entry.isIntersecting){
             entry.target.classList.add('show');
+            checker =+1;
         } else{
             entry.target.classList.remove('show');
         }
@@ -36,9 +36,54 @@ hiddenSec.forEach((el) => observer.observe(el));
 var hidden1Sec = document.querySelectorAll(".hidden1");
 hidden1Sec.forEach((el) => observer.observe(el));
 
+// Create timing interval to add description tags based on timer
+ /* The speed/duration of the effect in milliseconds */
 
+let i = 0;
+let headTxt = "I am a"
+let txt = 'developer'; /* The text */
+let speed = 50;
+
+var typeWriter = function () {
+ 
+    document.getElementById("leadTag").innerHTML += headTxt.charAt(i);
+  if (i < txt.length) {
+    document.getElementById("developerTag").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+
+let pTxt = ['','designer','software engineer','fitness guru'];
+let j = 0;
+let k = 0;
+
+var typeWriterP = function (){
+
+    // If j less than length of item at index
+    if (j < pTxt[k].length){
+        // Update text to character at j index
+        document.getElementById("subtitleTags").innerHTML += pTxt[k].charAt(j);
+        // Increase j by 1
+        j++;
+        // Time it
+        setTimeout(typeWriterP,speed);
+    }
+}
+
+// Initialise counter
+let count = 0;
+// Add on click effect for work button
 $("#work-btn").on("click",function(){
-    window.location.assign("https://sebastianj0nes.github.io/portfolio-website/#about");
+    if (count == 0){
+        typeWriter();
+        count++;
+    } else{
+        k++;
+        typeWriterP();
+        console.log(k);
+    }
+    $("#work-btn").text("'click again'");
 })
 
 

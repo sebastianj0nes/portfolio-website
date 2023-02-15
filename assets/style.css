@@ -17,14 +17,18 @@ body{
     margin: 0;
 }
 
-
 section {
     display: grid;
     place-items: center;
     align-content: center;
     min-height: 110vh;
     padding-bottom: 60px;
+}
 
+#landingCRow{
+    display: grid;
+    place-items: center;
+    align-content: center;
 }
 
 /* Loading transition classes */
@@ -47,6 +51,14 @@ section {
     transition: all 1s;
 }
 
+.hidden3,
+.hidden4,
+.hidden5{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(100%);
+    transition: all 1s;
+}
 
 .show{
     opacity: 1;
@@ -57,7 +69,6 @@ section {
 .landing{
     font-size: 45px;
 }
-
 
 /* Jumbotron */
 #about{

@@ -115,6 +115,10 @@ section {
 }
 
 .contactLogos{
-    height: 80px;
-    width: 72px;
+    max-height: 80px;
+    max-width: 72px;
+}
+.githubLogo{
+    height: 120px;
+    width: 85px;
 }

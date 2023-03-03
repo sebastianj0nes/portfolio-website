@@ -86,7 +86,6 @@ $("#work-btn").on("click",function(){
     $("#work-btn").text("'click again'");
 })
 
-
 // Function to clear work project content
 var clearContents = function(){
     projectHeader.text("");
